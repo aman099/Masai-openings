@@ -237,11 +237,12 @@ select {
 	width: 100%;
 }
 select:hover {
-	outline: 1px solid #000;
+	/* outline: 1px solid #000; */
+	outline: 1px solid rgb(179, 179, 179);
 }
 select:focus {
 	border: none;
-	outline: 2px solid #226f9e;
+	outline: 1px solid #226f9e;
 }
 .main-content .main-selector {
 	display: flex;
@@ -261,6 +262,7 @@ select:focus {
 	margin-top: 3px;
 	padding: 10px;
 	padding-right: 15px;
+	color: #a79699;
 }
 
 .main-cards .card {
@@ -271,7 +273,11 @@ select:focus {
 	box-shadow: 0 2px 6px rgba(82, 63, 105, 0.102);
 	border-radius: 6px;
 	padding: 30px;
-	margin: 40px 0;
+	/* margin: 40px 0; */
+	margin-bottom: 20px;
+}
+.main-cards .card.card-1 {
+	margin-top: 40px;
 }
 .card-left {
 	display: flex;
@@ -293,8 +299,11 @@ select:focus {
 	padding: 0 10px;
 	margin: 0;
 	background-color: #eff0f6;
+	color: #7a88a3;
 	display: grid;
 	place-content: center;
+	/*  */
+	border-radius: 10px;
 }
 .card-left-bottom {
 	display: flex;
@@ -303,8 +312,18 @@ select:focus {
 }
 .card-left-bottom p {
 	font-size: 14px;
-	font-weight: 500;
+	/* font-weight: 500; */
+	font-weight: 400;
 	color: #adacac;
+}
+.main-cards .card .card-right .btn-container button.primary-btn {
+	font-size: 13px;
+	font-weight: 500;
+	margin: 0;
+	margin-top: 10px;
+	padding: 10px 46px;
+	background: rgb(10, 187, 135);
+	color: #fff;
 }
 /* Footer */
 .footer {
@@ -566,16 +585,46 @@ select:focus {
 		/* gap: 100px; */
 		gap: 0;
 	}
+
+	/* Main */
+	main#main .main-container.container.is-fullhd {
+		padding: 0 25px 25px;
+	}
+	.main-title h4 {
+		font-size: 16.6px;
+		font-weight: 500;
+		align-self: flex-start;
+		/*  */
+		margin: 30px 0;
+	}
 	.main-cards .card {
 		flex-direction: column;
 		align-items: flex-start;
 	}
 	.main-cards .card .card-left {
-		gap: 1rem;
+		gap: 2rem;
 	}
 	.main-cards .card .card-right .btn-container button.primary-btn {
 		margin: 0;
-		margin-top: 10px;
+		margin-top: 20px;
+	}
+	.card-left-top {
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
+	}
+	.card-left-top span.card-label {
+		font-size: 12px;
+		font-weight: 500;
+		padding: 5px 10px;
+		width: fit-content;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	/* Main */
+	.main-content .main-selector .selector label {
+		font-size: 12px;
 	}
 }
 
