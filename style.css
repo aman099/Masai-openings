@@ -263,6 +263,7 @@ select:focus {
 	padding: 10px;
 	padding-right: 15px;
 	color: #a79699;
+	background-color: #fff;
 }
 
 .main-cards .card {
